@@ -90,3 +90,4 @@ ENV/
 
 *.jpg
 *.png
+*.npy
