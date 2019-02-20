@@ -92,3 +92,4 @@ ENV/
 *.png
 *.npy
 checkpoints/
+test*
