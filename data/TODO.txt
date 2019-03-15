@@ -1,0 +1,5 @@
+fix loading of model in face detection pipeline
+add varying color/brightness images to training set.
+add batchnorm
+convert training to use model defined in Expresion_network.py
+add lots of documentation
