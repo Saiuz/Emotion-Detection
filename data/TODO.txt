@@ -1,5 +1,6 @@
-fix loading of model in face detection pipeline
+fix bug which causes "labelIdx = np.where(data.prediction[0] == 1.0)[0][0]" in display function to fail.
+add hue integration
+add running average of emotions to limit false positives
 add varying color/brightness images to training set.
 add batchnorm
-convert training to use model defined in Expresion_network.py
 add lots of documentation

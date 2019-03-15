@@ -1,30 +1,46 @@
 import numpy as np
 import tensorflow as tf
-
+import traceback
 
 
 class Expression_Network(object):
-    def __init__(self):
+    def __init__(self,num_classes,Training=False):
         #hardcode in num_classes
-        self.num_classes = 4
-        tf.reset_default_graph()
-        self.x = tf.placeholder(dtype=tf.float32, shape=(None,128,128),name='x')
-        self.model(self.x)
-        self.sess = tf.Session()
-        self.saver = tf.train.Saver()
-        self.saver.restore(self.sess,"checkpoints/model.ckpt")
+        try:
+            self.Training = Training
+            self.num_classes = num_classes
+
+
+            if not self.Training:
+                tf.reset_default_graph()
+                self.x = tf.placeholder(dtype=tf.float32, shape=(None,128,128),name='x')
+                self.model(self.x)
+                self.sess = tf.Session()
+                self.saver = tf.train.Saver()
+                self.saver.restore(self.sess,"checkpoints/model.ckpt")
+        except:
+            data.done = True
+            print("exception in model creation/restoration")
+            traceback.print_exc()
+            
+
 
     def predict_loop(self, data):
-    	while not data.done:
-    		if data.faceim is not None:
-    			data.prediction = self.predict([data.faceim])
+        try:
+            while not data.done:
+                if data.faceim is not None:
+                    data.prediction = self.predict([data.faceim])
+        except Exception as e:
+            print("exception in predict loop")
+            traceback.print_exc()
+            data.done = True
 
 
     def predict(self, img):
         return self.sess.run(self.prediction, feed_dict={self.x:img})
     
-    def model(self, input):
-        self.reshaped = tf.expand_dims(input, -1)
+    def model(self, x):
+        self.reshaped = tf.expand_dims(x, -1)
         # batch,128,128,1
 
         # first convolution
@@ -78,4 +94,6 @@ class Expression_Network(object):
             activation_fn=None)
 
         self.prediction = tf.nn.softmax(self.logits,)
+        if self.Training:
+            return self.logits, self.prediction
 
