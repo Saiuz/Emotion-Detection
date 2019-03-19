@@ -29,7 +29,7 @@ class Expression_Network(object):
         try:
             while not data.done:
                 if data.faceim is not None:
-                    data.prediction = self.predict([data.faceim])
+                    data.prediction = np.argmax(self.predict([data.faceim]))
         except Exception as e:
             print("exception in predict loop")
             traceback.print_exc()
