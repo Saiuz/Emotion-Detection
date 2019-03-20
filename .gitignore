@@ -92,4 +92,4 @@ ENV/
 *.png
 *.npy
 checkpoints/
-test*
+test.ipynb
