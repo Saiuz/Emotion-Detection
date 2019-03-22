@@ -15,12 +15,8 @@ class Expression_Network(object):
             self.Training = Training
             self.num_classes = num_classes        
           
-            if not self.Training:
-                tf.keras.backend.clear_session()
-                self.graph = tf.get_default_graph()
-                self.model = self.build_model()
-                self.model.build(input_shape=(128,128))
-                self.model.load_weights("checkpoints/model.h5")
+
+                
 
         except:
             print("exception in model creation/restoration")
@@ -30,15 +26,13 @@ class Expression_Network(object):
 
     def predict_loop(self, data):
         try:
-            #TESTING
-            starttime = time.time()
-            
-            #TESTING
-            while not data.done and time.time() - starttime < 10:
-                #TESTING
-                
-                #TESTING
-                if data.faceim is not None and data.faceim.shape == (128,128):
+            self.model = self.build_model()
+            self.model.build(input_shape=(128,128))
+            self.model.load_weights("checkpoints/model.h5")
+
+            while not data.done:
+
+                if data.faceim is not None:
                     data.prediction = np.argmax(self.predict([data.faceim]))
             data.done = True
         except Exception as e:
@@ -48,8 +42,7 @@ class Expression_Network(object):
 
 
     def predict(self, img):
-        with self.graph.as_default():
-            return self.model.predict([img])
+        return self.model.predict([img])
     
     #def call(self,x):
     #    x = tf.keras.backend.expand_dims(x,-1)
