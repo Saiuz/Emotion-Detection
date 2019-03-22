@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D, BatchNormalization, Reshape
+from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D, BatchNormalization, Reshape, Dropout
 from tensorflow.keras import Model
 import traceback
 
@@ -14,24 +14,21 @@ class Expression_Network(object):
         try:
             self.Training = Training
             self.num_classes = num_classes        
-          
-
-                
-
+            self.loaded = False
         except:
             print("exception in model creation/restoration")
             traceback.print_exc()
             
-
-
+    def load_model(self):
+        self.model = self.build_model()
+        self.model.build(input_shape=(128,128))
+        self.model.load_weights("checkpoints/model.h5")
+        self.loaded = True
+ 
     def predict_loop(self, data):
         try:
-            self.model = self.build_model()
-            self.model.build(input_shape=(128,128))
-            self.model.load_weights("checkpoints/model.h5")
-
+            self.load_model()
             while not data.done:
-
                 if data.faceim is not None:
                     data.prediction = np.argmax(self.predict([data.faceim]))
             data.done = True
@@ -42,6 +39,8 @@ class Expression_Network(object):
 
 
     def predict(self, img):
+        if not self.loaded:
+            self.load_model()
         return self.model.predict([img])
     
     #def call(self,x):
@@ -67,10 +66,9 @@ class Expression_Network(object):
             BatchNormalization(),
             Conv2D(64, 11, activation='relu'),
             MaxPooling2D(pool_size=4),
-            BatchNormalization(),
+            Dropout(.2),
             Flatten(),
-            Dense(256, activation=tf.nn.leaky_relu,input_shape=(1600,)),
-            BatchNormalization(),
-            Dense(self.num_classes,activation="softmax")
+            Dense(256, activation=tf.nn.leaky_relu, kernel_regularizer=tf.keras.regularizers.l2(0.001)),
+            Dense(self.num_classes,activation="softmax", kernel_regularizer=tf.keras.regularizers.l2(0.001))
         ])
         return model
