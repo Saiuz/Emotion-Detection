@@ -1,5 +1,3 @@
 add running average of emotions to limit false positives
 add lots of documentation
-tf 2.0?
-tensorboard
-transfer to karas but get video of tensorflow code first
+get video of tensorflow code 
