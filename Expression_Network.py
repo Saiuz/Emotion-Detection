@@ -1,38 +1,37 @@
 import numpy as np
 import tensorflow as tf
+from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D, BatchNormalization, Reshape, Dropout
+from tensorflow.keras import Model
 import traceback
 
-
+#TESTING
+import cv2
+import time
+#TESTING
 class Expression_Network(object):
     def __init__(self,num_classes,Training=False):
         #hardcode in num_classes
         try:
-            
             self.Training = Training
-            self.num_classes = num_classes
-            
-            
-            if self.Training:
-                self.train_pl = tf.placeholder(tf.bool,name="train_pl")
-            else:
-                tf.reset_default_graph()
-                self.train_pl = tf.placeholder(tf.bool,name="train_pl")
-                self.x = tf.placeholder(dtype=tf.float32, shape=(None,128,128),name='x')
-                self.model(self.x)
-                self.sess = tf.Session()
-                self.saver = tf.train.Saver()
-                self.saver.restore(self.sess,"checkpoints/model.ckpt")
+            self.num_classes = num_classes        
+            self.loaded = False
         except:
             print("exception in model creation/restoration")
             traceback.print_exc()
             
-
-
+    def load_model(self):
+        self.model = self.build_model()
+        self.model.build(input_shape=(128,128))
+        self.model.load_weights("checkpoints/model.h5")
+        self.loaded = True
+ 
     def predict_loop(self, data):
         try:
+            self.load_model()
             while not data.done:
                 if data.faceim is not None:
                     data.prediction = np.argmax(self.predict([data.faceim]))
+            data.done = True
         except Exception as e:
             print("exception in predict loop")
             traceback.print_exc()
@@ -40,68 +39,36 @@ class Expression_Network(object):
 
 
     def predict(self, img):
-        return self.sess.run(self.prediction, feed_dict={self.x:img,self.train_pl:False})
+        if not self.loaded:
+            self.load_model()
+        return self.model.predict([img])
     
-    def model(self, x):
-        self.reshaped = tf.expand_dims(x, -1)
+    #def call(self,x):
+    #    x = tf.keras.backend.expand_dims(x,-1)
+    #    x = self.conv1(x)
+    #    x = self.pool1(x)
+    #    x = self.poolnorm(x)
+    #    x = self.conv2(x)
+    #    x = self.pool2(x)
+    #    x = self.pool2norm(x)
+    #    x = self.flat(x)
+    #    x = self.dense(x)
+    #    x = self.densenorm(x)
+    #    x = self.dense2(x)
+    #    return x
+    
+    def build_model(self):
         # batch,128,128,1
-
-        # first convolution
-        self.conv = tf.contrib.layers.conv2d(
-            self.reshaped,
-            32,
-            (9,9),
-            stride=(1,1),
-            padding='VALID',
-            weights_initializer=tf.initializers.random_normal)
-        #batch,120,120,32
-
-
-        #subsample
-        self.pool = tf.contrib.layers.max_pool2d(
-            self.conv,
-            (4,4),
-            stride=(4,4))
-        #batch,30,30,32
-        self.poolnorm = tf.contrib.layers.batch_norm(self.pool, is_training=self.train_pl)
-
-        #second convolution
-        self.conv2 = tf.contrib.layers.conv2d(
-            self.poolnorm,
-            64,
-            (11,11),
-            stride=(1,1),
-            padding='VALID',
-            weights_initializer=tf.initializers.random_normal)
-        #batch,20,20,64
-
-        #subsample
-        self.pool2 = tf.contrib.layers.max_pool2d(
-            self.conv2,
-            (4,4),
-            stride=(4,4))
-        #batch,5,5,64
-        self.pool2norm = tf.contrib.layers.batch_norm(self.pool2, is_training=self.train_pl)
-
-        #flatten
-        self.flat = tf.contrib.layers.flatten(self.pool2norm)
-        #batch,1600
-        
-
-        #fully connected
-        self.fc = tf.contrib.layers.fully_connected(
-            self.flat,
-            256,
-            activation_fn=tf.nn.leaky_relu)
-
-
-        #batch,256
-        self.logits = tf.contrib.layers.fully_connected(
-            self.fc,
-            self.num_classes,
-            activation_fn=None)
-
-        self.prediction = tf.nn.softmax(self.logits,)
-        if self.Training:
-            return self.logits, self.prediction
-
+        model = tf.keras.models.Sequential([
+            Reshape((128,128,1),input_shape=(128,128)),      
+            Conv2D(32, 9, activation='relu'),
+            MaxPooling2D(pool_size=4),
+            BatchNormalization(),
+            Conv2D(64, 11, activation='relu'),
+            MaxPooling2D(pool_size=4),
+            Dropout(.2),
+            Flatten(),
+            Dense(256, activation=tf.nn.leaky_relu, kernel_regularizer=tf.keras.regularizers.l2(0.001)),
+            Dense(self.num_classes,activation="softmax", kernel_regularizer=tf.keras.regularizers.l2(0.001))
+        ])
+        return model
