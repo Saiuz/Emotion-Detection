@@ -1,93 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/GUI/main.py" line="51" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cea2b1e4-9d2f-41d3-a0ef-ab114f125739" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Create Labeled Images.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Create Labeled Images.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Expression Network.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Expression Network.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Expression_Network.py" beforeDir="false" afterPath="$PROJECT_DIR$/Expression_Network.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Face Detection.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Face Detection.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/titlechange.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/video.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/video.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/Create Labeled Images.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/Expression Network.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/Expression_Network.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/Face Detection.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/TODO.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/500_picts_satz.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/events.out.tfevents.1553237261.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/events.out.tfevents.1553237294.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/events.out.tfevents.1553242879.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/events.out.tfevents.1553243672.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/events.out.tfevents.1553244508.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/events.out.tfevents.1553247667.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/events.out.tfevents.1553250525.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/events.out.tfevents.1553250720.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/events.out.tfevents.1553250749.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/events.out.tfevents.1553250872.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_eye.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_eye_tree_eyeglasses.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_frontalcatface.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_frontalcatface_extended.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_frontalface_alt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_frontalface_alt2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_frontalface_alt_tree.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_frontalface_default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_fullbody.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_lefteye_2splits.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_licence_plate_rus_16stages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_lowerbody.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_profileface.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_righteye_2splits.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_russian_plate_number.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_smile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/haarcascade_upperbody.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/data/labelList.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/old_version/project_updated/images/faceLabels.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/Create Labeled Images.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/Expression Network.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/Expression_Network.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/Face Detection.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/TODO.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/500_picts_satz.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/events.out.tfevents.1553237261.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/events.out.tfevents.1553237294.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/events.out.tfevents.1553242879.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/events.out.tfevents.1553243672.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/events.out.tfevents.1553244508.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/events.out.tfevents.1553247667.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/events.out.tfevents.1553250525.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/events.out.tfevents.1553250720.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/events.out.tfevents.1553250749.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/events.out.tfevents.1553250872.SPENCER-DESKTOP" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_eye.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_eye_tree_eyeglasses.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_frontalcatface.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_frontalcatface_extended.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_frontalface_alt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_frontalface_alt2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_frontalface_alt_tree.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_frontalface_default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_fullbody.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_lefteye_2splits.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_licence_plate_rus_16stages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_lowerbody.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_profileface.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_righteye_2splits.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_russian_plate_number.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_smile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/haarcascade_upperbody.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/data/labelList.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_updated/images/faceLabels.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +17,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Expressions$titlechange.coverage" NAME="titlechange Coverage Results" MODIFIED="1553542259906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/Expressions$testmain.coverage" NAME="testmain Coverage Results" MODIFIED="1553562773124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
-    <SUITE FILE_PATH="coverage/Expressions$main.coverage" NAME="main Coverage Results" MODIFIED="1553562102907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/Expressions$main.coverage" NAME="main Coverage Results" MODIFIED="1553574253124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/Expressions$guitest.coverage" NAME="guitest Coverage Results" MODIFIED="1553498442273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Expressions$icon.coverage" NAME="icon Coverage Results" MODIFIED="1553542441412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/Expressions$video.coverage" NAME="video Coverage Results" MODIFIED="1553557832679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
@@ -115,89 +34,87 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="18" />
-          <entry key="py" value="2429" />
+          <entry key="py" value="3205" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="2429" />
+          <entry key="Python" value="3205" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="6" />
+          <entry key="py" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="6" />
+          <entry key="Python" value="8" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI/simple.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-              <folding>
-                <element signature="e#198#208#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GUI/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#683#729#0" />
-                <element signature="e#960#1034#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI/video.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI/OpencvQt.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1196">
-              <caret line="52" column="35" lean-forward="true" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI/testmain.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-807">
-              <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.4357872">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/GUI/main.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="276">
+                  <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+                  <folding>
+                    <element signature="e#0#10#0" expanded="true" />
+                    <element signature="e#960#1034#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/GUI/testmain.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-807">
+                  <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#0#10#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/GUI/video.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="115">
+                  <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+                  <folding>
+                    <element signature="e#0#48#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/GUI/OpencvQt.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="506">
+                  <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+                  <folding>
+                    <element signature="e#0#10#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -289,7 +206,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testmain">
+  <component name="RunManager" selected="Python.main">
     <configuration name="OpencvQt" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Expressions" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -409,9 +326,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.testmain" />
         <item itemvalue="Python.OpencvQt" />
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.video" />
         <item itemvalue="Python.icon" />
       </list>
@@ -435,7 +352,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1705757" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.007995736" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
@@ -445,7 +362,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3264642" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3264642" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -463,32 +380,7 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/GUI/main.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/GUI/main.py</url>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/GUI/simple.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding>
-            <element signature="e#198#208#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GUI/titlechange.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -506,10 +398,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/simple.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <element signature="e#198#208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GUI/OpencvQt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="52" column="35" lean-forward="true" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+        <state relative-caret-position="506">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -518,18 +420,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/video.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="115">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="276">
+          <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#683#729#0" />
             <element signature="e#960#1034#0" />
           </folding>
         </state>

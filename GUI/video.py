@@ -10,19 +10,28 @@ class SharedData:
         self.hasphoto = False
         self.photo = None
 
+    def set_photo(self, photo):
+        #print("photo set: " + str(photo.shape))
+        self.photo = photo
+
+    def get_photo(self):
+        return self.photo
+
 class VideoThread(QThread):
     changePixmap = pyqtSignal(QImage)
 
-    def __init__(self, PhotoShare, parent=None):
+    def __init__(self, PhotoData, parent=None):
         QThread.__init__(self, parent=parent)
         self.isRunning = True
-        self.PhotoShare = PhotoShare
+        self.PhotoData = PhotoData
+
     def run(self):
         cap = cv2.VideoCapture(0)
         while self.isRunning:
             ret, frame = cap.read()
             if ret:
                 rgb_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                self.PhotoData.set_photo(rgb_image)
                 convert_to_qt_format = QImage(rgb_image.data, rgb_image.shape[1], rgb_image.shape[0], QImage.Format_RGB888)
                 p = convert_to_qt_format.scaled(640, 480, Qt.KeepAspectRatio)
                 self.changePixmap.emit(p)
