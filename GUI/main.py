@@ -4,12 +4,16 @@ from PyQt5.QtWidgets import (QApplication, QWidget, QDesktopWidget,
                              QMainWindow, QLabel, QHBoxLayout, QToolTip, QPushButton)
 from PyQt5.QtGui import QIcon, QPixmap, QImage, QFont
 from video import VideoThread, SharedData
+import cv2
+import numpy as np
 
 
 class EmotionLabeler(QMainWindow):
 
     def __init__(self):
         super().__init__()
+        self.haar_cascade = cv2.CascadeClassifier(
+            'data/haarcascade_frontalface_alt.xml')
         self.videoRunning = None
         self.photoData = SharedData()
         self.initUI()
@@ -18,10 +22,22 @@ class EmotionLabeler(QMainWindow):
         self.videoFeed.setPixmap(QPixmap.fromImage(image))
 
     def setFaceImg(self):
-        rgb_image = self.photoData.get_photo()
-        convert_to_qt_format = QImage(rgb_image.data, rgb_image.shape[1], rgb_image.shape[0], QImage.Format_RGB888)
-        p = convert_to_qt_format.scaled(640, 480, Qt.KeepAspectRatio)
-        self.__setFaceImg__(p)
+        if self.photoData.hasphoto:
+            img = self.photoData.get_photo()
+
+            img = cv2.flip(img, 1)
+            gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+            faces = self.haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
+            faceimg = None
+            if len(faces) == 1:
+                x, y, w, h = faces[0]
+                faceimg = gray[y:y + h, x:x + w]
+                img = img[y:y + h, x:x + w]
+                img = cv2.resize(img, (200,200))
+                img = np.copy(img)
+            convert_to_qt_format = QImage(img.data, img.shape[1], img.shape[0], QImage.Format_RGB888)
+            p = convert_to_qt_format #convert_to_qt_format.scaled(640, 480, Qt.KeepAspectRatio)
+            self.__setFaceImg__(p)
 
     def __setFaceImg__(self, image):
         self.faceImg.setPixmap(QPixmap.fromImage(image))

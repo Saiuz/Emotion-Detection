@@ -12,6 +12,7 @@ class SharedData:
 
     def set_photo(self, photo):
         #print("photo set: " + str(photo.shape))
+        self.hasphoto = True
         self.photo = photo
 
     def get_photo(self):
