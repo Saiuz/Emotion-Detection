@@ -1,14 +1,17 @@
 from PyQt5.QtCore import QThread, Qt, pyqtSignal
 import cv2
-from PyQt5.QtGui import QImage
 import numpy as np
 
+
 class FaceDetectionThread(QThread):
-    changePixmap = pyqtSignal(QImage)
+
+    #changePixmap = pyqtSignal(QImage)
 
     def __init__(self, PhotoData, parent=None):
         QThread.__init__(self, parent=parent)
         self.PhotoData = PhotoData
+        self.haar_cascade = cv2.CascadeClassifier(
+            'data/haarcascade_frontalface_alt.xml')
 
     def biggerFace(self,faces):
         faces = np.array(faces)
@@ -25,26 +28,23 @@ class FaceDetectionThread(QThread):
             return [biggestFace]
 
     def getFaceImg(self):
-        if self.photoData.hasphoto:
-            img = self.photoData.get_photo()
+        if self.PhotoData.hasphoto:
+            img = self.PhotoData.get_photo()
 
             img = cv2.flip(img, 1)
             gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
             faces = self.haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
             faces = self.biggerFace(faces)
-            faceimg = None
 
             if len(faces) == 1:
                 x, y, w, h = faces[0]
                 faceimg = gray[y:y + h, x:x + w]
-                img = img[y:y + h, x:x + w]
-                self.photoData.FaceImg = np.copy(cv2.resize(faceimg,(128,128)))
+                return np.copy(faceimg)
             else:
-                img = self.photoData.NoFaceImg
+                return None
 
-            img = cv2.resize(img, (200, 200))
-            img = np.copy(img)
-            p = QImage(img.data, img.shape[1], img.shape[0],
-                                          img.shape[1] * 3,QImage.Format_RGB888)
 
-            self.changePixmap.emit(p)
+    def run(self):
+        while True:
+            #print(str(self.PhotoData) + "\n\n")
+            self.PhotoData.set_face_image(self.getFaceImg())

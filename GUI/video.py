@@ -10,6 +10,15 @@ class SharedData:
         self.FaceImg = None
         self.NoFaceImg = cv2.imread("data/NoFace.png")
 
+    def __str__(self):
+        arrayargs = [self.hasphoto,self.photo,self.FaceImg,self.NoFaceImg]
+        for i in range(len(arrayargs)):
+            if type(arrayargs[i]) is np.ndarray:
+                arrayargs[i] = arrayargs[i].shape
+
+        datastr = "hasphoto={}\nphotoshape={}\nfaceimgshape={}\nnofaceimgshape={}".format(*arrayargs)
+        return datastr
+
     def set_photo(self, photo):
         #print("photo set: " + str(photo.shape))
         self.hasphoto = True
@@ -17,6 +26,14 @@ class SharedData:
 
     def get_photo(self):
         return self.photo
+
+    def get_face_image(self):
+        if self.FaceImg is not None:
+            return np.copy(self.FaceImg)
+        else:
+            return self.NoFaceImg
+    def set_face_image(self,img):
+        self.FaceImg = img
 
 class VideoThread(QThread):
     changePixmap = pyqtSignal(QImage)

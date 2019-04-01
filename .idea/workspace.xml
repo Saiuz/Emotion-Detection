@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/GUI/main.py" line="31" />
+    <bookmark url="file://$PROJECT_DIR$/GUI/main.py" line="39" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cea2b1e4-9d2f-41d3-a0ef-ab114f125739" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Expressions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Expressions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Expression Network.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Expression Network.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/facedetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/facedetection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/video.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/video.py" afterDir="false" />
     </list>
@@ -28,39 +25,6 @@
     <SUITE FILE_PATH="coverage/Expressions$video.coverage" NAME="video Coverage Results" MODIFIED="1553557832679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
     <SUITE FILE_PATH="coverage/Expressions$OpencvQt.coverage" NAME="OpencvQt Coverage Results" MODIFIED="1553562255353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-270848638">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="18" />
-          <entry key="py" value="4653" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="4653" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="13" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="13" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.47472924">
       <split-first>
@@ -68,47 +32,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/GUI/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-                  <folding>
-                    <element signature="e#0#10#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$USER_HOME$/Miniconda3/envs/expressions2/Lib/site-packages/numpy/lib/function_base.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-9208">
-                  <caret line="791" selection-start-line="791" selection-end-line="791" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="377">
-                  <caret line="17" selection-start-line="17" selection-end-line="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1159">
-                  <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/GUI/testmain.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="506">
-                  <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+                <state relative-caret-position="544">
+                  <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -123,8 +48,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/GUI/video.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="222">
-                  <caret line="40" column="78" lean-forward="true" selection-start-line="40" selection-start-column="78" selection-end-line="40" selection-end-column="78" />
+                <state relative-caret-position="-17">
+                  <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
                   <folding>
                     <element signature="e#0#48#0" expanded="true" />
                   </folding>
@@ -135,8 +60,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/GUI/facedetection.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="782">
-                  <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+                <state relative-caret-position="331">
+                  <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#0#48#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -156,6 +84,8 @@
     <findStrings>
       <find>disp_img</find>
       <find>image</find>
+      <find>photo</find>
+      <find>photodata</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,15 +105,9 @@
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2408" />
-    <option name="y" value="-20" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -195,7 +119,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,14 +135,19 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.idesettings.debugger.python" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="PyDebuggerOptionsProvider">
     <option name="mySupportQtDebugging" value="false" />
@@ -379,20 +307,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553498197829</updated>
+      <workItem from="1553813421690" duration="1560000" />
+      <workItem from="1554065965029" duration="14229000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15789000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.114072494" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.11727079" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Jupyter" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3264642" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3991323" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18743229" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -408,12 +342,33 @@
       <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11727079" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Jupyter" order="0" weight="0.32936078" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.18743229" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.3991323" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.329718" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.329718" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32995737" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -425,12 +380,20 @@
       <configuration name="PythonConfigurationType">
         <watch expression="image" language="Python" />
         <watch expression="image.PaintDeviceMetric" />
-        <watch expression="self.photoData" />
+        <watch expression="self.photoData" language="Python" />
       </configuration>
     </watches-manager>
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Expressions$main.coverage" NAME="main Coverage Results" MODIFIED="1554086461278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+  </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>self.photoData</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>image</expression-string>
         <language-id>Python</language-id>
@@ -447,9 +410,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/OpencvQt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GUI/testmain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="374">
           <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -457,41 +427,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/test.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
+        <state relative-caret-position="17">
           <caret line="1663" selection-start-line="1663" selection-end-line="1663" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Miniconda3/envs/expressions2/Lib/site-packages/numpy/lib/function_base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9208">
+        <state relative-caret-position="17">
           <caret line="791" selection-start-line="791" selection-end-line="791" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/OpencvQt.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/26871890/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="804" column="8" selection-start-line="804" selection-start-column="8" selection-end-line="804" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/builtins.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/video.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="40" column="78" lean-forward="true" selection-start-line="40" selection-start-column="78" selection-end-line="40" selection-end-column="78" />
+        <state relative-caret-position="-17">
+          <caret line="14" column="39" lean-forward="true" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
@@ -500,15 +477,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/facedetection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="49" column="36" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+        <state relative-caret-position="331">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        <state relative-caret-position="544">
+          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
