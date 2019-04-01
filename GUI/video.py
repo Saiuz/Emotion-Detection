@@ -9,6 +9,7 @@ class SharedData:
         self.photo = None
         self.FaceImg = None
         self.NoFaceImg = cv2.imread("data/NoFace.png")
+        self.greyscaletoggle = None
 
     def __str__(self):
         arrayargs = [self.hasphoto,self.photo,self.FaceImg,self.NoFaceImg]
@@ -29,11 +30,18 @@ class SharedData:
 
     def get_face_image(self):
         if self.FaceImg is not None:
-            return np.copy(self.FaceImg)
+            return True, np.copy(self.FaceImg)
         else:
-            return self.NoFaceImg
+            return False, self.NoFaceImg
+
     def set_face_image(self,img):
         self.FaceImg = img
+
+    def set_graytoggle_state(self,state):
+        self.greyscaletoggle = state
+
+    def get_graytoggle_state(self):
+        return self.greyscaletoggle
 
 class VideoThread(QThread):
     changePixmap = pyqtSignal(QImage)

@@ -38,7 +38,10 @@ class FaceDetectionThread(QThread):
 
             if len(faces) == 1:
                 x, y, w, h = faces[0]
-                faceimg = gray[y:y + h, x:x + w]
+                if self.PhotoData.get_graytoggle_state():
+                    faceimg = gray[y:y + h, x:x + w]
+                else:
+                    faceimg = img[y:y + h, x:x + w]
                 return np.copy(faceimg)
             else:
                 return None

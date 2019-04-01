@@ -27,18 +27,29 @@ class EmotionLabeler(QMainWindow):
 
 
     def setFaceImg(self):
-        img = self.PhotoData.get_face_image()
+        ret_val, img = self.PhotoData.get_face_image()
         #img = cv2.resize(img, (200, 200))
         # exists = os.path.isfile('testim.png')
         # if not exists:
         #     cv2.imwrite('testim.png', img)
-        qimg = QImage(img.data, img.shape[1], img.shape[0],
-                   img.shape[1], QImage.Format_Grayscale8)
-        scaled = qimg.scaled(self.faceImg.size(),Qt.IgnoreAspectRatio)
+
+        #if loading rgb image (default image is rgb)
+        if not ret_val or not self.GrayScaleBox.isChecked():
+            print("color")
+            qimg = QImage(img.data, img.shape[1], img.shape[0],
+                          img.shape[1] * 3, QImage.Format_RGB888)
+        else:
+            qimg = QImage(img.data, img.shape[1], img.shape[0],
+                       img.shape[1], QImage.Format_Grayscale8)
+
+        scaled = qimg.scaled(self.faceImg.size(), Qt.IgnoreAspectRatio)
 
         p = QPixmap.fromImage(scaled)
         self.faceImg.setPixmap(p)
         return
+
+    def GreyScaleToggle(self,state):
+        self.PhotoData.set_graytoggle_state(self.GrayScaleBox.isChecked())
 
     def CreateMenu(self):
         self.mainMenu = self.menuBar()
@@ -75,7 +86,10 @@ class EmotionLabeler(QMainWindow):
         vidth.start()
 
         #GREYSCALE TOGGLE
-        #self.GrayScaleBox = Q
+        self.GrayScaleBox = QCheckBox("GrayScale", self)
+        self.GrayScaleBox.stateChanged.connect(self.GreyScaleToggle)
+        self.GrayScaleBox.move(800,500)
+        self.GrayScaleBox.toggle()
 
 
 
