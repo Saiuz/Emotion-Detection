@@ -1,0 +1,81 @@
+================================================================================
+Input tree: '.'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file '.\\Expression_Network.py'
+ outputting to './project_updated\\Expression_Network.py'
+--------------------------------------------------------------------------------
+
+'.\\Expression_Network.py' Line 16
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.placeholder' to 'tf.compat.v1.placeholder'
+
+    Old:                 self.train_pl = tf.placeholder(tf.bool,name="train_pl")
+                                         ~~~~~~~~~~~~~~                          
+    New:                 self.train_pl = tf.compat.v1.placeholder(tf.bool,name="train_pl")
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~                          
+
+'.\\Expression_Network.py' Line 18
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.reset_default_graph' to 'tf.compat.v1.reset_default_graph'
+
+    Old:                 tf.reset_default_graph()
+                         ~~~~~~~~~~~~~~~~~~~~~~   
+    New:                 tf.compat.v1.reset_default_graph()
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+
+'.\\Expression_Network.py' Line 19
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.placeholder' to 'tf.compat.v1.placeholder'
+
+    Old:                 self.train_pl = tf.placeholder(tf.bool,name="train_pl")
+                                         ~~~~~~~~~~~~~~                          
+    New:                 self.train_pl = tf.compat.v1.placeholder(tf.bool,name="train_pl")
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~                          
+
+'.\\Expression_Network.py' Line 20
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.placeholder' to 'tf.compat.v1.placeholder'
+
+    Old:                 self.x = tf.placeholder(dtype=tf.float32, shape=(None,128,128),name='x')
+                                  ~~~~~~~~~~~~~~                                                  
+    New:                 self.x = tf.compat.v1.placeholder(dtype=tf.float32, shape=(None,128,128),name='x')
+                                  ~~~~~~~~~~~~~~~~~~~~~~~~                                                  
+
+'.\\Expression_Network.py' Line 22
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.Session' to 'tf.compat.v1.Session'
+
+    Old:                 self.sess = tf.Session()
+                                     ~~~~~~~~~~   
+    New:                 self.sess = tf.compat.v1.Session()
+                                     ~~~~~~~~~~~~~~~~~~~~   
+
+'.\\Expression_Network.py' Line 23
+--------------------------------------------------------------------------------
+
+Renamed function 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+
+    Old:                 self.saver = tf.train.Saver()
+                                      ~~~~~~~~~~~~~~   
+    New:                 self.saver = tf.compat.v1.train.Saver()
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~   
+
+
+--------------------------------------------------------------------------------
+Processing file '.\\trackPurple.py'
+ outputting to './project_updated\\trackPurple.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Processing file '.\\data\\__init__.py'
+ outputting to './project_updated\\data\\__init__.py'
+--------------------------------------------------------------------------------
+
+
