@@ -3,7 +3,8 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (QApplication, QDesktopWidget,
                              QMainWindow, QLabel, QToolTip, QPushButton,QCheckBox)
 from PyQt5.QtGui import QPixmap, QImage, QFont
-from video import VideoThread, SharedData
+from video import VideoThread
+from dataclass import SharedData
 from facedetection import FaceDetectionThread
 import cv2
 import numpy as np
@@ -24,8 +25,6 @@ class EmotionLabeler(QMainWindow):
     def setImage(self, image):
         self.videoFeed.setPixmap(QPixmap.fromImage(image))
 
-
-
     def setFaceImg(self):
         ret_val, img = self.PhotoData.get_face_image()
         #img = cv2.resize(img, (200, 200))
@@ -35,7 +34,6 @@ class EmotionLabeler(QMainWindow):
 
         #if loading rgb image (default image is rgb)
         if not ret_val or not self.GrayScaleBox.isChecked():
-            print("color")
             qimg = QImage(img.data, img.shape[1], img.shape[0],
                           img.shape[1] * 3, QImage.Format_RGB888)
         else:

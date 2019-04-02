@@ -28,8 +28,8 @@ class FaceDetectionThread(QThread):
             return [biggestFace]
 
     def getFaceImg(self):
-        if self.PhotoData.hasphoto:
-            img = self.PhotoData.get_photo()
+        if self.PhotoData.hasPhoto:
+            img = self.PhotoData.get_frame()
 
             img = cv2.flip(img, 1)
             gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)

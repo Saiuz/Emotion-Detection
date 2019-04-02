@@ -21,3 +21,13 @@ Obviously I'm trying to create a system to classify emotions on someones face, s
 4. Make our own face/emotion dataset to train the Neural Network on
 5. Use the classification to do something? Change Hue lights?
 
+
+
+# Draft
+- why threading
+- CNN structure
+- CNN training
+- Creating dataset
+- video capture
+- haar classifier
+

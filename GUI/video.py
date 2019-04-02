@@ -3,46 +3,6 @@ import cv2
 from PyQt5.QtGui import QImage
 import numpy as np
 
-class SharedData:
-    def __init__(self):
-        self.hasphoto = False
-        self.photo = None
-        self.FaceImg = None
-        self.NoFaceImg = cv2.imread("data/NoFace.png")
-        self.greyscaletoggle = None
-
-    def __str__(self):
-        arrayargs = [self.hasphoto,self.photo,self.FaceImg,self.NoFaceImg]
-        for i in range(len(arrayargs)):
-            if type(arrayargs[i]) is np.ndarray:
-                arrayargs[i] = arrayargs[i].shape
-
-        datastr = "hasphoto={}\nphotoshape={}\nfaceimgshape={}\nnofaceimgshape={}".format(*arrayargs)
-        return datastr
-
-    def set_photo(self, photo):
-        #print("photo set: " + str(photo.shape))
-        self.hasphoto = True
-        self.photo = photo
-
-    def get_photo(self):
-        return self.photo
-
-    def get_face_image(self):
-        if self.FaceImg is not None:
-            return True, np.copy(self.FaceImg)
-        else:
-            return False, self.NoFaceImg
-
-    def set_face_image(self,img):
-        self.FaceImg = img
-
-    def set_graytoggle_state(self,state):
-        self.greyscaletoggle = state
-
-    def get_graytoggle_state(self):
-        return self.greyscaletoggle
-
 class VideoThread(QThread):
     changePixmap = pyqtSignal(QImage)
 
