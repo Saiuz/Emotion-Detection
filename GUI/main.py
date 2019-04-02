@@ -70,9 +70,9 @@ class EmotionLabeler(QMainWindow):
         self.faceImg.resize(200, 200)
 
         #GET IMAGE BUTTON
-        facebt = QPushButton("get image", self)
-        facebt.move(700, 500)
-        facebt.clicked.connect(self.setFaceImg)
+        self.FaceButton = QPushButton("get image", self)
+        self.FaceButton.move(650, 490)
+        self.FaceButton.clicked.connect(self.setFaceImg)
 
 
         #VIDEO STREAM
@@ -86,8 +86,13 @@ class EmotionLabeler(QMainWindow):
         #GREYSCALE TOGGLE
         self.GrayScaleBox = QCheckBox("GrayScale", self)
         self.GrayScaleBox.stateChanged.connect(self.GreyScaleToggle)
-        self.GrayScaleBox.move(800,500)
+        self.GrayScaleBox.move(700,260)
         self.GrayScaleBox.toggle()
+
+        #SAVE BUTTON
+        self.SaveButton = QPushButton("Save", self)
+        self.SaveButton.move(750,490)
+        self.SaveButton.resize(self.FaceButton.size())
 
 
 
