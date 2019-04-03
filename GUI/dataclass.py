@@ -1,13 +1,37 @@
 import cv2
 import numpy as np
+import csv
+import os
+from collections import Counter
+
 
 class SaveData:
-    def __init__(self):
+    def __init__(self, labelconfig="data/labelList.csv", labellist="data/faceLabels.csv"):
         self.labels = None
         self.currentLabel = None
         self.imageDir = "data/Images"
-        self.labelcsv = "data/labelList.csv"
-        
+        self.labelcsv = []
+        self.imageIndex = 0
+
+
+        with open(labelconfig) as csvfile:
+            reader = csv.reader(csvfile, delimiter=",")
+            for row in reader:
+                self.labelcsv.append(row)
+
+        if os.path.isfile(labellist):
+            with open(labellist, 'r') as file:
+                l = np.array(list(csv.reader(file)))
+                if l.shape[0] > 0:
+                    self.labelCount = Counter(l[:, 1])
+                    self.imageIndex = int(l[-1, 0][4:-4]) + 1
+                else:
+                    self.labelCount = {}
+            self.csvFile = open(labellist + '/faceLabels.csv', 'a')
+        else:
+            self.csvFile = open(labellist + '/faceLabels.csv', 'w')
+            self.labelCount = {}
+
 
 class SharedData:
     def __init__(self):

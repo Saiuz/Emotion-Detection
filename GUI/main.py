@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import (QApplication, QDesktopWidget,
                              QMainWindow, QLabel, QToolTip, QPushButton,QCheckBox)
 from PyQt5.QtGui import QPixmap, QImage, QFont
 from video import VideoThread
-from dataclass import SharedData
+from dataclass import SharedData, SaveData
 from facedetection import FaceDetectionThread
 import cv2
 import numpy as np
@@ -63,6 +63,8 @@ class EmotionLabeler(QMainWindow):
         centerpoint = QDesktopWidget().availableGeometry().center()
         qtRectangle.moveCenter(centerpoint)
         QToolTip.setFont(QFont('SansSerif', 10))
+
+        self.saver = SaveData()
 
 
         #FACE DETECTION

@@ -1,6 +1,8 @@
 add running average of emotions to limit false positives
 add lots of documentation
 get video of tensorflow code 
-Exe?
-app?
 DL face detection?
+update expression network file to read labels from csv
+
+
+GUI:

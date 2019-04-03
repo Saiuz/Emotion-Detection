@@ -7,6 +7,7 @@
     <list default="true" id="cea2b1e4-9d2f-41d3-a0ef-ab114f125739" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/GUI/dataclass.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/dataclass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +31,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/GUI/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="56" selection-start-line="56" selection-end-line="56" />
+                <state relative-caret-position="340">
+                  <caret line="62" column="67" lean-forward="true" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -42,10 +43,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/GUI/dataclass.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+                <state relative-caret-position="493">
+                  <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
                   <folding>
-                    <element signature="e#1#11#0" expanded="true" />
+                    <element signature="e#0#10#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -58,8 +59,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/GUI/facedetection.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="273">
-                  <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+                <state relative-caret-position="447">
+                  <caret line="43" column="51" lean-forward="true" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
                   <folding>
                     <element signature="e#0#48#0" expanded="true" />
                   </folding>
@@ -133,8 +134,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="233" />
+    <option name="y" value="-19" />
     <option name="width" value="1936" />
     <option name="height" value="1032" />
   </component>
@@ -289,7 +290,7 @@
       <workItem from="1553813421690" duration="1560000" />
       <workItem from="1554065965029" duration="24603000" />
       <workItem from="1554151290781" duration="8830000" />
-      <workItem from="1554231695470" duration="12922000" />
+      <workItem from="1554231695470" duration="18876000" />
     </task>
     <task id="LOCAL-00001" summary="added seperate file for dataclass">
       <created>1554237063716</created>
@@ -316,7 +317,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47915000" />
+    <option name="totallyTimeSpent" value="53869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -393,7 +394,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Expressions$dataclass.coverage" NAME="dataclass Coverage Results" MODIFIED="1554237192123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
-    <SUITE FILE_PATH="coverage/Expressions$main.coverage" NAME="main Coverage Results" MODIFIED="1554247191994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/Expressions$main.coverage" NAME="main Coverage Results" MODIFIED="1554258815985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -515,8 +516,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="340">
+          <caret line="62" column="67" lean-forward="true" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/dataclass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -525,20 +536,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/facedetection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+        <state relative-caret-position="447">
+          <caret line="43" column="51" lean-forward="true" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/dataclass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding>
-            <element signature="e#1#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
