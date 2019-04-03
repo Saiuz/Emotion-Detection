@@ -53,6 +53,9 @@ class EmotionLabeler(QMainWindow):
         self.mainMenu = self.menuBar()
         self.fileMenu = self.mainMenu.addMenu('File')
 
+    def SaveLabeledFace(self):
+        return
+
     def initUI(self):
         self.resize(900, 600)
         qtRectangle = self.frameGeometry()
@@ -93,6 +96,7 @@ class EmotionLabeler(QMainWindow):
         self.SaveButton = QPushButton("Save", self)
         self.SaveButton.move(750,490)
         self.SaveButton.resize(self.FaceButton.size())
+        self.SaveButton.clicked.connect(self.SaveLabeledFace)
 
 
 

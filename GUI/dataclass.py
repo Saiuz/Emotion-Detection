@@ -1,6 +1,14 @@
 import cv2
 import numpy as np
 
+class SaveData:
+    def __init__(self):
+        self.labels = None
+        self.currentLabel = None
+        self.imageDir = "data/Images"
+        self.labelcsv = "data/labelList.csv"
+        
+
 class SharedData:
     def __init__(self):
         self.hasPhoto = False
@@ -9,7 +17,7 @@ class SharedData:
         self.NoFaceImg = cv2.imread("data/noface.png")
         self.greyscaletoggle = None
         self.facedims = None
-        self.label = None
+
 
     def __str__(self):
         arrayargs = [self.hasPhoto, self.frame, self.FaceImg, self.NoFaceImg]
