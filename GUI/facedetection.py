@@ -1,6 +1,7 @@
 from PyQt5.QtCore import QThread, Qt, pyqtSignal
 import cv2
 import numpy as np
+import time
 
 
 class FaceDetectionThread(QThread):
@@ -11,13 +12,16 @@ class FaceDetectionThread(QThread):
         QThread.__init__(self, parent=parent)
         self.PhotoData = PhotoData
         self.haar_cascade = cv2.CascadeClassifier(
-            'data/haarcascade_frontalface_alt.xml')
+            'data/haarcascade_frontalface_default.xml')
+
 
     def biggerFace(self,faces):
         faces = np.array(faces)
+
         if faces.shape[0] < 2:
             return faces
         else:
+
             biggestFace = None
             biggestSize = 0
             for face in faces:
@@ -33,7 +37,8 @@ class FaceDetectionThread(QThread):
 
             img = cv2.flip(img, 1)
             gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-            faces = self.haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
+
+            faces = self.haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=4)
             faces = self.biggerFace(faces)
 
             if len(faces) == 1:
@@ -42,12 +47,14 @@ class FaceDetectionThread(QThread):
                     faceimg = gray[y:y + h, x:x + w]
                 else:
                     faceimg = img[y:y + h, x:x + w]
-                return np.copy(faceimg)
-            else:
-                return None
+                return True, np.copy(faceimg)
+
+        return False, None
+
 
 
     def run(self):
         while True:
             #print(str(self.PhotoData) + "\n\n")
-            self.PhotoData.set_face_image(self.getFaceImg())
+            self.PhotoData.set_face_image(*self.getFaceImg())
+            #time.sleep(.1)

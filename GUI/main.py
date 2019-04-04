@@ -11,7 +11,7 @@ import numpy as np
 import os
 import signal
 
-PID = os.getpid()
+
 
 
 class EmotionLabeler(QMainWindow):
@@ -20,6 +20,7 @@ class EmotionLabeler(QMainWindow):
 
         self.videoRunning = None
         self.PhotoData = SharedData()
+        self.saver = SaveData(self.PhotoData)
         self.initUI()
 
     def setImage(self, image):
@@ -34,15 +35,17 @@ class EmotionLabeler(QMainWindow):
 
         #if loading rgb image (default image is rgb)
         if not ret_val or not self.GrayScaleBox.isChecked():
-            qimg = QImage(img.data, img.shape[1], img.shape[0],
-                          img.shape[1] * 3, QImage.Format_RGB888)
+            resized = cv2.resize(img, (200, 200))
+            qimg = QImage(resized.data, resized.shape[1], resized.shape[0],
+                          resized.shape[1] * 3, QImage.Format_RGB888)
         else:
-            qimg = QImage(img.data, img.shape[1], img.shape[0],
-                       img.shape[1], QImage.Format_Grayscale8)
+            resized = cv2.resize(img,(200,200))
+            qimg = QImage(resized.data, resized.shape[1], resized.shape[0],
+                       resized.shape[1], QImage.Format_Grayscale8)
 
-        scaled = qimg.scaled(self.faceImg.size(), Qt.IgnoreAspectRatio)
+        #scaled = qimg.scaled(self.faceImg.size(), Qt.IgnoreAspectRatio)
 
-        p = QPixmap.fromImage(scaled)
+        p = QPixmap.fromImage(qimg)
         self.faceImg.setPixmap(p)
         return
 
@@ -63,8 +66,6 @@ class EmotionLabeler(QMainWindow):
         centerpoint = QDesktopWidget().availableGeometry().center()
         qtRectangle.moveCenter(centerpoint)
         QToolTip.setFont(QFont('SansSerif', 10))
-
-        self.saver = SaveData()
 
 
         #FACE DETECTION
@@ -110,6 +111,7 @@ class EmotionLabeler(QMainWindow):
 
 
 if __name__ == '__main__':
+    PID = os.getpid()
     app = QApplication(sys.argv)
     ex = EmotionLabeler()
     signal.signal(signal.SIGTERM, app.exec_())

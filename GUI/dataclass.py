@@ -6,12 +6,13 @@ from collections import Counter
 
 
 class SaveData:
-    def __init__(self, labelconfig="data/labelList.csv", labellist="data/faceLabels.csv"):
+    def __init__(self, PhotoData, labelconfig="data/labelList.csv", labellist="data/faceLabels.csv"):
         self.labels = None
         self.currentLabel = None
         self.imageDir = "data/Images"
         self.labelcsv = []
         self.imageIndex = 0
+        self.PhotoData = PhotoData
 
 
         with open(labelconfig) as csvfile:
@@ -27,10 +28,21 @@ class SaveData:
                     self.imageIndex = int(l[-1, 0][4:-4]) + 1
                 else:
                     self.labelCount = {}
-            self.csvFile = open(labellist + '/faceLabels.csv', 'a')
+            self.csvFile = open(labellist, 'a')
         else:
-            self.csvFile = open(labellist + '/faceLabels.csv', 'w')
+            self.csvFile = open(labellist, 'w')
             self.labelCount = {}
+
+        self.csvFileWriter = csv.writer(self.csvFile, delimiter=',',
+                                   quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
+
+        print(self.labelCount, self.imageIndex)
+
+        def save_current(self):
+            photo = self.PhotoData.FaceImg
+
+
+
 
 
 class SharedData:
@@ -41,6 +53,7 @@ class SharedData:
         self.NoFaceImg = cv2.imread("data/noface.png")
         self.greyscaletoggle = None
         self.facedims = None
+        self.hasFaceImg = False
 
 
     def __str__(self):
@@ -61,12 +74,13 @@ class SharedData:
         return self.frame
 
     def get_face_image(self):
-        if self.FaceImg is not None:
-            return True, np.copy(self.FaceImg)
+        if self.hasFaceImg:
+            return self.hasFaceImg, np.copy(self.FaceImg)
         else:
-            return False, self.NoFaceImg
+            return self.hasFaceImg, self.NoFaceImg
 
-    def set_face_image(self,img):
+    def set_face_image(self,ret_val, img):
+        self.hasFaceImg = ret_val
         self.FaceImg = img
 
     def set_graytoggle_state(self,state):

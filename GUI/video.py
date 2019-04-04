@@ -2,6 +2,7 @@ from PyQt5.QtCore import QThread, Qt, pyqtSignal
 import cv2
 from PyQt5.QtGui import QImage
 import numpy as np
+import time
 
 class VideoThread(QThread):
     changePixmap = pyqtSignal(QImage)
@@ -25,6 +26,7 @@ class VideoThread(QThread):
                 p = QImage(rgb_image.data, rgb_image.shape[1], rgb_image.shape[0], QImage.Format_RGB888)
                 #p = convert_to_qt_format.scaled(640, 480, Qt.KeepAspectRatio)
                 self.changePixmap.emit(p)
+            #time.sleep(.1)
 
     def __del__(self):
         self.cap.release()

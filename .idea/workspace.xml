@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/GUI/main.py" line="45" />
+    <bookmark url="file://$PROJECT_DIR$/GUI/main.py" line="48" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cea2b1e4-9d2f-41d3-a0ef-ab114f125739" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Face Detection.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Face Detection.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/data/faceLabels.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/data/faceLabels.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/dataclass.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/dataclass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/facedetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/facedetection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/saver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/video.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/video.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,11 +32,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/GUI/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="62" column="67" lean-forward="true" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
+                <state relative-caret-position="272">
+                  <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -40,13 +44,13 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/GUI/dataclass.py">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/GUI/facedetection.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+                <state relative-caret-position="255">
+                  <caret line="15" selection-start-line="15" selection-end-line="15" />
                   <folding>
-                    <element signature="e#0#10#0" expanded="true" />
+                    <element signature="e#0#48#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -57,24 +61,12 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/GUI/facedetection.py">
+            <entry file="file://$PROJECT_DIR$/GUI/dataclass.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="447">
-                  <caret line="43" column="51" lean-forward="true" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+                <state relative-caret-position="1003">
+                  <caret line="59" column="77" lean-forward="true" selection-start-line="59" selection-start-column="77" selection-end-line="59" selection-end-column="77" />
                   <folding>
-                    <element signature="e#0#48#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/GUI/saver.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" selection-start-line="8" selection-end-line="8" />
-                  <folding>
-                    <element signature="e#0#48#0" expanded="true" />
+                    <element signature="e#0#10#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -83,8 +75,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/GUI/video.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+                <state relative-caret-position="532">
+                  <caret line="43" column="78" lean-forward="true" selection-start-line="43" selection-start-column="78" selection-end-line="43" selection-end-column="78" />
                   <folding>
                     <element signature="e#0#48#0" expanded="true" />
                   </folding>
@@ -111,6 +103,7 @@
       <find>photodata</find>
       <find>hasphoto</find>
       <find>has</find>
+      <find>pid</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,17 +118,17 @@
         <option value="$PROJECT_DIR$/GUI/OpencvQt.py" />
         <option value="$PROJECT_DIR$/GUI/testmain.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/GUI/video.py" />
         <option value="$PROJECT_DIR$/GUI/saver.py" />
-        <option value="$PROJECT_DIR$/GUI/facedetection.py" />
-        <option value="$PROJECT_DIR$/GUI/main.py" />
         <option value="$PROJECT_DIR$/GUI/dataclass.py" />
+        <option value="$PROJECT_DIR$/GUI/video.py" />
+        <option value="$PROJECT_DIR$/GUI/main.py" />
+        <option value="$PROJECT_DIR$/GUI/facedetection.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="233" />
-    <option name="y" value="-19" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1032" />
   </component>
@@ -290,7 +283,7 @@
       <workItem from="1553813421690" duration="1560000" />
       <workItem from="1554065965029" duration="24603000" />
       <workItem from="1554151290781" duration="8830000" />
-      <workItem from="1554231695470" duration="18876000" />
+      <workItem from="1554231695470" duration="27079000" />
     </task>
     <task id="LOCAL-00001" summary="added seperate file for dataclass">
       <created>1554237063716</created>
@@ -317,18 +310,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53869000" />
+    <option name="totallyTimeSpent" value="62072000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.118336886" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.118336886" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32925472" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18743229" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18743229" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -393,8 +386,8 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Expressions$dataclass.coverage" NAME="dataclass Coverage Results" MODIFIED="1554237192123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
-    <SUITE FILE_PATH="coverage/Expressions$main.coverage" NAME="main Coverage Results" MODIFIED="1554258815985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/Expressions$dataclass.coverage" NAME="dataclass Coverage Results" MODIFIED="1554320896801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/Expressions$main.coverage" NAME="main Coverage Results" MODIFIED="1554329072176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -496,18 +489,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/video.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        <state relative-caret-position="532">
+          <caret line="43" column="78" lean-forward="true" selection-start-line="43" selection-start-column="78" selection-end-line="43" selection-end-column="78" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/saver.py">
+    <entry file="file://$PROJECT_DIR$/GUI/facedetection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
@@ -516,30 +509,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="62" column="67" lean-forward="true" selection-start-line="62" selection-start-column="67" selection-end-line="62" selection-end-column="67" />
+        <state relative-caret-position="272">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/saver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/dataclass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+        <state relative-caret-position="1003">
+          <caret line="59" column="77" lean-forward="true" selection-start-line="59" selection-start-column="77" selection-end-line="59" selection-end-column="77" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/facedetection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="43" column="51" lean-forward="true" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
