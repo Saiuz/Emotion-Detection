@@ -90,7 +90,7 @@ class EmotionLabeler(QMainWindow):
         self.faceImg.resize(200, 200)
 
         #GET IMAGE BUTTON
-        self.FaceButton = QPushButton("get image", self)
+        self.FaceButton = QPushButton("Get Image", self)
         self.FaceButton.move(650, 490)
         self.FaceButton.clicked.connect(self.setFaceImg)
 
@@ -128,6 +128,11 @@ class EmotionLabeler(QMainWindow):
         self.LabelTracker.move(0,530)
         self.LabelTracker.resize(640,20)
         self.LabelTracker.setAlignment(Qt.AlignCenter)
+
+        #CAPTURE AND SAVE BUTTON
+        self.SaveButton = QPushButton("Capture and Save \n (shortcut: space)", self)
+        self.SaveButton.move(650, 520)
+        self.SaveButton.resize(200,40)
 
 
 
