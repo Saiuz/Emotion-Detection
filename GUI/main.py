@@ -133,7 +133,6 @@ class EmotionLabeler(QMainWindow):
         #LABEL SELECTION
         self.LabelMenu = QComboBox(self)
         self.LabelMenu.addItems(self.saver.labels)
-        print(self.saver.labels)
         self.LabelMenu.currentIndexChanged.connect(self.labelChange)
         self.LabelMenu.move(700,300)
 
