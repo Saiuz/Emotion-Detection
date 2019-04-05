@@ -1,14 +1,12 @@
 import sys
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import QPixmap, QImage, QFont, QGuiApplication, QKeySequence, QIcon
+from PyQt5.QtGui import QPixmap, QImage,QKeySequence, QIcon
 from video import VideoThread
 from dataclass import SharedData, SaveData
 from facedetection import FaceDetectionThread
 import cv2
-import numpy as np
 import os
-import time
 import signal
 
 
