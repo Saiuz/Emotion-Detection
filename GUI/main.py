@@ -1,8 +1,7 @@
 import sys
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import (QApplication, QDesktopWidget,
-                             QMainWindow, QLabel, QToolTip, QPushButton,QCheckBox, QComboBox)
-from PyQt5.QtGui import QPixmap, QImage, QFont, QGuiApplication
+from PyQt5.QtWidgets import *
+from PyQt5.QtGui import QPixmap, QImage, QFont, QGuiApplication, QKeySequence
 from video import VideoThread
 from dataclass import SharedData, SaveData
 from facedetection import FaceDetectionThread
@@ -72,14 +71,20 @@ class EmotionLabeler(QMainWindow):
         self.setFaceImg()
         self.saveLabeledFace()
 
+    def capShortcutToggle(self):
+        if self.CapShortcutBox.isChecked():
+            self.CapAndSaveShortcut.activated.connect(self.captureAndSave)
+        else:
+            self.CapAndSaveShortcut.activated.disconnect()
+
+
 
     def initUI(self):
         self.resize(900, 600)
         qtRectangle = self.frameGeometry()
-        self.createMenu()
+        #self.createMenu()
         centerpoint = QDesktopWidget().availableGeometry().center()
         qtRectangle.moveCenter(centerpoint)
-        QToolTip.setFont(QFont('SansSerif', 10))
 
 
         #FACE DETECTION
@@ -130,9 +135,20 @@ class EmotionLabeler(QMainWindow):
         self.LabelTracker.setAlignment(Qt.AlignCenter)
 
         #CAPTURE AND SAVE BUTTON
-        self.SaveButton = QPushButton("Capture and Save \n (shortcut: space)", self)
-        self.SaveButton.move(650, 520)
-        self.SaveButton.resize(200,40)
+        self.CapAndSaveButton = QPushButton("Capture and Save \n (shortcut: space)", self)
+        self.CapAndSaveButton.move(650, 520)
+        self.CapAndSaveButton.resize(200,40)
+        self.CapAndSaveButton.clicked.connect(self.captureAndSave)
+
+
+
+        #CAP AND SAVE SHORTCUT
+        self.CapShortcutBox = QCheckBox("Space to Cap/Save", self)
+        self.CapShortcutBox.stateChanged.connect(self.capShortcutToggle)
+        self.CapShortcutBox.move(700, 240)
+        self.CapShortcutBox.resize(120,15)
+        self.CapAndSaveShortcut = QShortcut(QKeySequence("Space"),self)
+
 
 
 
