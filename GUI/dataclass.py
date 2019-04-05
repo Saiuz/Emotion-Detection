@@ -56,7 +56,7 @@ class SaveData:
                 self.imageIndex += 1
                 self.faceImg = None
         else:
-            print("no face image to save")
+            print("No Face Image")
 
 
 
