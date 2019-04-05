@@ -1,4 +1,4 @@
-from PyQt5.QtCore import QThread, Qt, pyqtSignal
+from PyQt5.QtCore import QThread
 import cv2
 import numpy as np
 import time

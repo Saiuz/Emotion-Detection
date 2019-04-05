@@ -1,8 +1,7 @@
-from PyQt5.QtCore import QThread, Qt, pyqtSignal
+from PyQt5.QtCore import QThread, pyqtSignal
 import cv2
 from PyQt5.QtGui import QImage
 import numpy as np
-import time
 
 class VideoThread(QThread):
     changePixmap = pyqtSignal(QImage)
