@@ -14,6 +14,7 @@ class SaveData:
         self.PhotoData = PhotoData
         self.labelList = labelList
         self.labelConfig = labelConfig
+        self.faceImg = None
 
 
         with open(labelConfig) as csvfile:
@@ -32,21 +33,23 @@ class SaveData:
         else:
             self.labelCount = {}
 
-
-
         print(self.labelCount, self.imageIndex)
 
+    def set_face_image(self,image):
+        self.faceImg = image
+        return
+
     def save_current(self):
-        ret_val, faceim = self.PhotoData.get_face_image()
-        if ret_val:
+        if self.faceImg is not None:
             with open(self.labelList, 'a+') as csvfile:
                 csvFileWriter = csv.writer(csvfile, delimiter=',',
                                                 quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
                 filename = "face" + str(self.imageIndex) + ".png"
                 filepath = self.imageDir + "/" + filename
-                cv2.imwrite(filepath,faceim)
+                cv2.imwrite(filepath,self.faceImg)
                 csvFileWriter.writerow([filename,self.currentLabel])
                 self.imageIndex += 1
+                self.faceImg = None
                 print("wrote file probably")
         else:
             print("oopsies fuck me")
@@ -86,6 +89,7 @@ class SharedData:
         return self.frame
 
     def get_face_image(self):
+        #print(self.hasFaceImg, self.FaceImg.shape)
         if self.hasFaceImg:
             return self.hasFaceImg, np.copy(self.FaceImg)
         else:

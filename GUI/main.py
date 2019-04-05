@@ -28,12 +28,10 @@ class EmotionLabeler(QMainWindow):
 
     def setFaceImg(self):
         ret_val, img = self.PhotoData.get_face_image()
-        #img = cv2.resize(img, (200, 200))
-        # exists = os.path.isfile('testim.png')
-        # if not exists:
-        #     cv2.imwrite('testim.png', img)
 
-        #if loading rgb image (default image is rgb)
+        if ret_val:
+            self.saver.set_face_image(img)
+
         if not ret_val or not self.GrayScaleBox.isChecked():
             resized = cv2.resize(img, (200, 200))
             qimg = QImage(resized.data, resized.shape[1], resized.shape[0],
@@ -42,8 +40,6 @@ class EmotionLabeler(QMainWindow):
             resized = cv2.resize(img,(200,200))
             qimg = QImage(resized.data, resized.shape[1], resized.shape[0],
                        resized.shape[1], QImage.Format_Grayscale8)
-
-        #scaled = qimg.scaled(self.faceImg.size(), Qt.IgnoreAspectRatio)
 
         p = QPixmap.fromImage(qimg)
         self.faceImg.setPixmap(p)
