@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (QApplication, QDesktopWidget,
-                             QMainWindow, QLabel, QToolTip, QPushButton,QCheckBox)
+                             QMainWindow, QLabel, QToolTip, QPushButton,QCheckBox, QComboBox)
 from PyQt5.QtGui import QPixmap, QImage, QFont
 from video import VideoThread
 from dataclass import SharedData, SaveData
@@ -56,6 +56,9 @@ class EmotionLabeler(QMainWindow):
         self.saver.save_current()
         return
 
+    def labelChange(self):
+        self.saver.change_label(self.LabelMenu.currentIndex())
+
     def initUI(self):
         self.resize(900, 600)
         qtRectangle = self.frameGeometry()
@@ -97,6 +100,14 @@ class EmotionLabeler(QMainWindow):
         self.SaveButton.move(750,490)
         self.SaveButton.resize(self.FaceButton.size())
         self.SaveButton.clicked.connect(self.SaveLabeledFace)
+
+        #LABEL SELECTION
+        self.LabelMenu = QComboBox(self)
+        print(self.saver.labels)
+        self.LabelMenu.addItems(self.saver.labels[:])
+        self.LabelMenu.currentIndexChanged.connect(self.labelChange)
+        self.LabelMenu.move(700,300)
+
 
 
 

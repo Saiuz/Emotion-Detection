@@ -6,24 +6,25 @@ from collections import Counter
 
 
 class SaveData:
-    def __init__(self, PhotoData, labelConfig="data/labelList.csv", labelList="data/faceLabels.csv"):
+    def __init__(self, PhotoData, labelConfig="data/labelConfig.csv", labelList="data/faceLabels.csv"):
         self.currentLabel = "Neutral"
         self.imageDir = "data/Images"
         self.labels = []
         self.imageIndex = 0
         self.PhotoData = PhotoData
-        self.labelList = labelList
-        self.labelConfig = labelConfig
+        self.labelListPath = labelList
+        self.labelConfigPath = labelConfig
         self.faceImg = None
 
 
         with open(labelConfig) as csvfile:
             reader = csv.reader(csvfile, delimiter=",")
             for row in reader:
-                self.labels.append(row)
+                self.labels.append(row[1])
+        self.labels = np.array(self.labels)
 
-        if os.path.isfile(self.labelList):
-            with open(self.labelList, 'r') as file:
+        if os.path.isfile(self.labelListPath):
+            with open(self.labelListPath, 'r') as file:
                 l = np.array(list(csv.reader(file)))
                 if l.shape[0] > 0:
                     self.labelCount = Counter(l[:, 1])
@@ -31,17 +32,21 @@ class SaveData:
                 else:
                     self.labelCount = {}
         else:
-            self.labelCount = {}
+            self.labelCount = Counter()
 
-        print(self.labelCount, self.imageIndex)
+        #print(self.labelCount, self.imageIndex)
 
     def set_face_image(self,image):
         self.faceImg = image
         return
 
+    def change_label(self,index):
+        self.currentLabel = self.labels[index]
+        return
+
     def save_current(self):
         if self.faceImg is not None:
-            with open(self.labelList, 'a+') as csvfile:
+            with open(self.labelListPath, 'a+') as csvfile:
                 csvFileWriter = csv.writer(csvfile, delimiter=',',
                                                 quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
                 filename = "face" + str(self.imageIndex) + ".png"
@@ -50,9 +55,8 @@ class SaveData:
                 csvFileWriter.writerow([filename,self.currentLabel])
                 self.imageIndex += 1
                 self.faceImg = None
-                print("wrote file probably")
         else:
-            print("oopsies fuck me")
+            print("no face image to save")
 
 
 
