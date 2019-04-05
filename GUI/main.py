@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import QPixmap, QImage, QFont, QGuiApplication, QKeySequence
+from PyQt5.QtGui import QPixmap, QImage, QFont, QGuiApplication, QKeySequence, QIcon
 from video import VideoThread
 from dataclass import SharedData, SaveData
 from facedetection import FaceDetectionThread
@@ -85,6 +85,10 @@ class EmotionLabeler(QMainWindow):
         #self.createMenu()
         centerpoint = QDesktopWidget().availableGeometry().center()
         qtRectangle.moveCenter(centerpoint)
+
+        #WINDOW TITLE
+        self.setWindowTitle("LabelFace")
+        self.setWindowIcon(QIcon("data/Icon.png"))
 
 
         #FACE DETECTION
