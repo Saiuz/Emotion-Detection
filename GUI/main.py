@@ -26,6 +26,7 @@ class EmotionLabeler(QMainWindow):
 
     def setImage(self, image):
         self.videoFeed.setPixmap(QPixmap.fromImage(image))
+        return
 
     def setFaceImg(self):
         ret_val, img = self.PhotoData.get_face_image()
@@ -44,19 +45,17 @@ class EmotionLabeler(QMainWindow):
 
         p = QPixmap.fromImage(qimg)
         self.faceImg.setPixmap(p)
-        return
 
-    def GreyScaleToggle(self,state):
+    def greyScaleToggle(self, state):
         self.PhotoData.set_graytoggle_state(self.GrayScaleBox.isChecked())
 
-    def CreateMenu(self):
+    def createMenu(self):
         self.mainMenu = self.menuBar()
         self.fileMenu = self.mainMenu.addMenu('File')
 
-    def SaveLabeledFace(self):
+    def saveLabeledFace(self):
         self.saver.save_current()
         self.updateLabelTracker()
-        return
 
     def labelChange(self):
         self.saver.change_label(self.LabelMenu.currentIndex())
@@ -68,12 +67,16 @@ class EmotionLabeler(QMainWindow):
         for key in keys:
             string += str(key) + ":" + str(self.saver.labelCount[key]) + "   "
         self.LabelTracker.setText(string)
-        return
+
+    def captureAndSave(self):
+        self.setFaceImg()
+        self.saveLabeledFace()
+
 
     def initUI(self):
         self.resize(900, 600)
         qtRectangle = self.frameGeometry()
-        self.CreateMenu()
+        self.createMenu()
         centerpoint = QDesktopWidget().availableGeometry().center()
         qtRectangle.moveCenter(centerpoint)
         QToolTip.setFont(QFont('SansSerif', 10))
@@ -102,7 +105,7 @@ class EmotionLabeler(QMainWindow):
 
         #GREYSCALE TOGGLE
         self.GrayScaleBox = QCheckBox("GrayScale", self)
-        self.GrayScaleBox.stateChanged.connect(self.GreyScaleToggle)
+        self.GrayScaleBox.stateChanged.connect(self.greyScaleToggle)
         self.GrayScaleBox.move(700,260)
         self.GrayScaleBox.toggle()
 
@@ -110,7 +113,7 @@ class EmotionLabeler(QMainWindow):
         self.SaveButton = QPushButton("Save", self)
         self.SaveButton.move(750,490)
         self.SaveButton.resize(self.FaceButton.size())
-        self.SaveButton.clicked.connect(self.SaveLabeledFace)
+        self.SaveButton.clicked.connect(self.saveLabeledFace)
 
         #LABEL SELECTION
         self.LabelMenu = QComboBox(self)
@@ -125,9 +128,6 @@ class EmotionLabeler(QMainWindow):
         self.LabelTracker.move(0,530)
         self.LabelTracker.resize(640,20)
         self.LabelTracker.setAlignment(Qt.AlignCenter)
-
-
-
 
 
 
