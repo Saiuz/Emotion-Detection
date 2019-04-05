@@ -68,9 +68,7 @@ class EmotionLabeler(QMainWindow):
             if len(string) > 100 * numLines:
                 string += "\n"
                 numLines += 1
-        self.LabelTracker.resize(self.LabelTrackerSize[0],self.LabelTrackerSize[1]*numLines)
         self.LabelTracker.setText(string)
-        self.LabelTracker.updateGeometry()
 
     def captureAndSave(self):
         self.setFaceImg()
