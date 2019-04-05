@@ -57,4 +57,4 @@ class FaceDetectionThread(QThread):
         while True:
             #print(str(self.PhotoData) + "\n\n")
             self.PhotoData.set_face_image(*self.getFaceImg())
-            #time.sleep(.1)
+            time.sleep(.2)

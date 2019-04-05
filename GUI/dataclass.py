@@ -6,40 +6,52 @@ from collections import Counter
 
 
 class SaveData:
-    def __init__(self, PhotoData, labelconfig="data/labelList.csv", labellist="data/faceLabels.csv"):
-        self.labels = None
-        self.currentLabel = None
+    def __init__(self, PhotoData, labelConfig="data/labelList.csv", labelList="data/faceLabels.csv"):
+        self.currentLabel = "Neutral"
         self.imageDir = "data/Images"
-        self.labelcsv = []
+        self.labels = []
         self.imageIndex = 0
         self.PhotoData = PhotoData
+        self.labelList = labelList
+        self.labelConfig = labelConfig
 
 
-        with open(labelconfig) as csvfile:
+        with open(labelConfig) as csvfile:
             reader = csv.reader(csvfile, delimiter=",")
             for row in reader:
-                self.labelcsv.append(row)
+                self.labels.append(row)
 
-        if os.path.isfile(labellist):
-            with open(labellist, 'r') as file:
+        if os.path.isfile(self.labelList):
+            with open(self.labelList, 'r') as file:
                 l = np.array(list(csv.reader(file)))
                 if l.shape[0] > 0:
                     self.labelCount = Counter(l[:, 1])
                     self.imageIndex = int(l[-1, 0][4:-4]) + 1
                 else:
                     self.labelCount = {}
-            self.csvFile = open(labellist, 'a')
         else:
-            self.csvFile = open(labellist, 'w')
             self.labelCount = {}
 
-        self.csvFileWriter = csv.writer(self.csvFile, delimiter=',',
-                                   quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
+
 
         print(self.labelCount, self.imageIndex)
 
-        def save_current(self):
-            photo = self.PhotoData.FaceImg
+    def save_current(self):
+        ret_val, faceim = self.PhotoData.get_face_image()
+        if ret_val:
+            with open(self.labelList, 'a+') as csvfile:
+                csvFileWriter = csv.writer(csvfile, delimiter=',',
+                                                quotechar='|', quoting=csv.QUOTE_MINIMAL, lineterminator='\n')
+                filename = "face" + str(self.imageIndex) + ".png"
+                filepath = self.imageDir + "/" + filename
+                cv2.imwrite(filepath,faceim)
+                csvFileWriter.writerow([filename,self.currentLabel])
+                self.imageIndex += 1
+                print("wrote file probably")
+        else:
+            print("oopsies fuck me")
+
+
 
 
 
