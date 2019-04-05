@@ -7,7 +7,6 @@ from collections import Counter
 
 class SaveData:
     def __init__(self, PhotoData, labelConfig="data/labelConfig.csv", labelList="data/faceLabels.csv"):
-        self.currentLabel = "Neutral"
         self.imageDir = "data/Images"
         self.labels = []
         self.imageIndex = 0
@@ -22,6 +21,7 @@ class SaveData:
             for row in reader:
                 self.labels.append(row[1])
         self.labels = np.array(self.labels)
+        self.currentLabel = self.labels[0]
 
         if os.path.isfile(self.labelListPath):
             with open(self.labelListPath, 'r') as file:
@@ -55,6 +55,7 @@ class SaveData:
                 csvFileWriter.writerow([filename,self.currentLabel])
                 self.imageIndex += 1
                 self.faceImg = None
+                self.labelCount[self.currentLabel] += 1
         else:
             print("No Face Image")
 

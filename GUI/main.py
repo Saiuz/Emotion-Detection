@@ -2,13 +2,14 @@ import sys
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import (QApplication, QDesktopWidget,
                              QMainWindow, QLabel, QToolTip, QPushButton,QCheckBox, QComboBox)
-from PyQt5.QtGui import QPixmap, QImage, QFont
+from PyQt5.QtGui import QPixmap, QImage, QFont, QGuiApplication
 from video import VideoThread
 from dataclass import SharedData, SaveData
 from facedetection import FaceDetectionThread
 import cv2
 import numpy as np
 import os
+import time
 import signal
 
 
@@ -54,10 +55,20 @@ class EmotionLabeler(QMainWindow):
 
     def SaveLabeledFace(self):
         self.saver.save_current()
+        self.updateLabelTracker()
         return
 
     def labelChange(self):
         self.saver.change_label(self.LabelMenu.currentIndex())
+
+    def updateLabelTracker(self):
+        keys = self.saver.labels
+
+        string = ""
+        for key in keys:
+            string += str(key) + ":" + str(self.saver.labelCount[key]) + "   "
+        self.LabelTracker.setText(string)
+        return
 
     def initUI(self):
         self.resize(900, 600)
@@ -103,10 +114,19 @@ class EmotionLabeler(QMainWindow):
 
         #LABEL SELECTION
         self.LabelMenu = QComboBox(self)
+        self.LabelMenu.addItems(self.saver.labels)
         print(self.saver.labels)
-        self.LabelMenu.addItems(self.saver.labels[:])
         self.LabelMenu.currentIndexChanged.connect(self.labelChange)
         self.LabelMenu.move(700,300)
+
+        #LABEL COUNT TRACKER
+        self.LabelTracker = QLabel(self)
+        self.updateLabelTracker()
+        self.LabelTracker.move(0,530)
+        self.LabelTracker.resize(640,20)
+        self.LabelTracker.setAlignment(Qt.AlignCenter)
+
+
 
 
 
