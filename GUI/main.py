@@ -17,7 +17,8 @@ import signal
 class EmotionLabeler(QMainWindow):
     def __init__(self):
         super().__init__()
-
+        self.MainWindowSize = [900,580]
+        self.LabelTrackerSize = [640,200]
         self.videoRunning = None
         self.PhotoData = SharedData()
         self.saver = SaveData(self.PhotoData)
@@ -69,7 +70,9 @@ class EmotionLabeler(QMainWindow):
             if len(string) > 100 * numLines:
                 string += "\n"
                 numLines += 1
+        self.LabelTracker.resize(self.LabelTrackerSize[0],self.LabelTrackerSize[1]*numLines)
         self.LabelTracker.setText(string)
+        self.LabelTracker.updateGeometry()
 
     def captureAndSave(self):
         self.setFaceImg()
@@ -84,7 +87,8 @@ class EmotionLabeler(QMainWindow):
 
 
     def initUI(self):
-        self.resize(900, 600)
+
+        self.resize(*self.MainWindowSize)
         qtRectangle = self.frameGeometry()
         #self.createMenu()
         centerpoint = QDesktopWidget().availableGeometry().center()
@@ -139,7 +143,7 @@ class EmotionLabeler(QMainWindow):
         self.LabelTracker = QLabel(self)
         self.updateLabelTracker()
         self.LabelTracker.move(0,530)
-        self.LabelTracker.resize(640,200)
+        self.LabelTracker.resize(*self.LabelTrackerSize)
         self.LabelTracker.setAlignment(Qt.AlignHCenter)
 
 
