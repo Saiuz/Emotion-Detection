@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cea2b1e4-9d2f-41d3-a0ef-ab114f125739" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/data/faceLabels.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/data/faceLabels.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/data/labelConfig.csv" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/data/labelConfig.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +31,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/GUI/main.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="395">
-                  <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+                <state relative-caret-position="476">
+                  <caret line="142" selection-start-line="142" selection-end-line="142" />
                   <folding>
                     <element signature="e#0#10#0" expanded="true" />
                   </folding>
@@ -283,7 +283,7 @@
       <workItem from="1554231695470" duration="29207000" />
       <workItem from="1554350598295" duration="6610000" />
       <workItem from="1554409308758" duration="11801000" />
-      <workItem from="1554489910615" duration="6646000" />
+      <workItem from="1554489910615" duration="8294000" />
     </task>
     <task id="LOCAL-00001" summary="added seperate file for dataclass">
       <created>1554237063716</created>
@@ -327,11 +327,25 @@
       <option name="project" value="LOCAL" />
       <updated>1554496875504</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added cap/save shortcut and toggle">
+      <created>1554497864506</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1554497864506</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added icon and window title">
+      <created>1554498691291</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1554498691291</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89257000" />
+    <option name="totallyTimeSpent" value="90905000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -408,7 +422,9 @@
     <MESSAGE value="updated print" />
     <MESSAGE value="created capture and save" />
     <MESSAGE value="created capture and save button" />
-    <option name="LAST_COMMIT_MESSAGE" value="created capture and save button" />
+    <MESSAGE value="added cap/save shortcut and toggle" />
+    <MESSAGE value="added icon and window title" />
+    <option name="LAST_COMMIT_MESSAGE" value="added icon and window title" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -421,7 +437,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Expressions$dataclass.coverage" NAME="dataclass Coverage Results" MODIFIED="1554320896801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
-    <SUITE FILE_PATH="coverage/Expressions$main.coverage" NAME="main Coverage Results" MODIFIED="1554497834523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
+    <SUITE FILE_PATH="coverage/Expressions$main.coverage" NAME="main Coverage Results" MODIFIED="1554499242964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GUI" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -554,8 +570,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+        <state relative-caret-position="476">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

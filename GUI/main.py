@@ -63,8 +63,12 @@ class EmotionLabeler(QMainWindow):
         keys = self.saver.labels
 
         string = ""
+        numLines = 1
         for key in keys:
             string += str(key) + ":" + str(self.saver.labelCount[key]) + "   "
+            if len(string) > 100 * numLines:
+                string += "\n"
+                numLines += 1
         self.LabelTracker.setText(string)
 
     def captureAndSave(self):
@@ -135,8 +139,9 @@ class EmotionLabeler(QMainWindow):
         self.LabelTracker = QLabel(self)
         self.updateLabelTracker()
         self.LabelTracker.move(0,530)
-        self.LabelTracker.resize(640,20)
-        self.LabelTracker.setAlignment(Qt.AlignCenter)
+        self.LabelTracker.resize(640,200)
+        self.LabelTracker.setAlignment(Qt.AlignHCenter)
+
 
         #CAPTURE AND SAVE BUTTON
         self.CapAndSaveButton = QPushButton("Capture and Save \n (shortcut: space)", self)
