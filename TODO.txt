@@ -3,6 +3,3 @@ add lots of documentation
 get video of tensorflow code 
 DL face detection?
 update expression network file to read labels from csv
-
-
-GUI:

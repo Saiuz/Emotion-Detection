@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cea2b1e4-9d2f-41d3-a0ef-ab114f125739" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -277,7 +276,7 @@
       <workItem from="1554231695470" duration="29207000" />
       <workItem from="1554350598295" duration="6610000" />
       <workItem from="1554409308758" duration="11801000" />
-      <workItem from="1554489910615" duration="10148000" />
+      <workItem from="1554489910615" duration="10159000" />
     </task>
     <task id="LOCAL-00001" summary="added seperate file for dataclass">
       <created>1554237063716</created>
@@ -370,22 +369,28 @@
       <option name="project" value="LOCAL" />
       <updated>1554500656071</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="nothing much">
+      <created>1554502218256</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1554502218256</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92759000" />
+    <option name="totallyTimeSpent" value="92770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11140725" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18851571" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.18851571" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -457,7 +462,8 @@
     <MESSAGE value="small size value change" />
     <MESSAGE value="removed unused imports" />
     <MESSAGE value="removed printing debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed printing debug" />
+    <MESSAGE value="nothing much" />
+    <option name="LAST_COMMIT_MESSAGE" value="nothing much" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
