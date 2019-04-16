@@ -1,8 +1,0 @@
-PyQt5 == 5.12.1
-django-tango == 0.10.0
-django-video == 0.2
-facedetection == 1.2
-jmbo-video == 2.0.0
-numpy == 1.16.2
-opencv_python == 4.0.0.21
-tensorflow_gpu == 2.0.0a0
