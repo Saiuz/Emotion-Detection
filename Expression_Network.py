@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from tensorflow.python.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D, BatchNormalization, Reshape, Dropout
+from tensorflow.keras.layers import Dense, Flatten, Conv2D, MaxPooling2D, BatchNormalization, Reshape, Dropout
 import traceback
 
 class Expression_Network(object):
