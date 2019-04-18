@@ -22,18 +22,6 @@ Obviously I'm trying to create a system to classify emotions on someones face, s
 5. Use the classification to do something? Change Hue lights?
 
 
-
-# Draft
-- Creating dataset
-- multi-threading
-- video capture
-- haar classifier
-- CNN structure
-- CNN training
-
-
-
-
 # Creating Our Own Dataset
 This is both the easiest part, and the most boring. But i've tried to make it as simple as possible. To easily create your own labels and take pictures from your desktop I recommend the app I made [https://github.com/ablacklama/FaceLabeler](https://github.com/ablacklama/FaceLabeler/releases). This works well for this project because the folder layout and a lot of the files used are the same. There is also an exe version of the labeler that you can put into your main folder and get up and running quickly. Just check the instructions on the [repo](https://github.com/ablacklama/FaceLabeler)
 
@@ -72,18 +60,19 @@ So now that we've got our greyscale images into the shared data folder, it's tim
 
 # Emotion Detector
 This is the real meat of the program, the convolutional neural network that classifies our emotions. I'm using a basic network with a few convolutional layers to extract features, a few fully connected layers at the bottom for classification, and a few normalization layers to prevent overfitting (read "memorizing") the dataset. 
-`
-Reshape((128,128,1),input_shape=(128,128)),      
-Conv2D(32, 9, activation='relu'),
-MaxPooling2D(pool_size=4),
-BatchNormalization(),
-Conv2D(64, 11, activation='relu'),
-MaxPooling2D(pool_size=4),
-Dropout(rate=.2),
-Flatten(),
-Dense(256, activation=tf.nn.leaky_relu, kernel_regularizer=tf.keras.regularizers.l2(0.001)),
-Dense(self.num_classes,activation="softmax", kernel_regularizer=tf.keras.regularizers.l2(0.001))
-`
+
+`Reshape  `
+`Convolutional   `
+`Max Pooling   `
+`Batch Normalization  `
+`Convolutional   `
+`Max Pooling  `
+`Dropout  `
+`Flattening  `
+`Fully Connected  `
+`Fully Connected  `
+`Softmax (output)`
+
 
 I'm using Tensorflow 2.0's Keras interface to define the model in `Expression_Network.py`.
 
