@@ -61,17 +61,17 @@ So now that we've got our greyscale images into the shared data folder, it's tim
 # Emotion Detector
 This is the real meat of the program, the convolutional neural network that classifies our emotions. I'm using a basic network with a few convolutional layers to extract features, a few fully connected layers at the bottom for classification, and a few normalization layers to prevent overfitting (read "memorizing") the dataset. 
 
-`Reshape  `
-`Convolutional   `
-`Max Pooling   `
-`Batch Normalization  `
-`Convolutional   `
-`Max Pooling  `
-`Dropout  `
-`Flattening  `
-`Fully Connected  `
-`Fully Connected  `
-`Softmax (output)`
+`Reshape`  
+`Convolutional`  
+`Max Pooling `  
+`Batch Normalization`  
+`Convolutional`  
+`Max Pooling`  
+`Dropout`  
+`Flattening`  
+`Fully Connected`  
+`Fully Connected`  
+`Softmax (output)`  
 
 
 I'm using Tensorflow 2.0's Keras interface to define the model in `Expression_Network.py`.
