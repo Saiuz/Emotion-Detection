@@ -21,6 +21,12 @@ Obviously I'm trying to create a system to classify emotions on someones face, s
 4. Make our own face/emotion dataset to train the Neural Network on
 5. Use the classification to do something? Change Hue lights?
 
+# Requirements
+Tensorflow 2.0
+Skimage
+tqdm
+matplotlib
+phue (if you want to control hue lights)
 
 # Creating Our Own Dataset
 This is both the easiest part, and the most boring. But i've tried to make it as simple as possible. To easily create your own labels and take pictures from your desktop I recommend the app I made [https://github.com/ablacklama/FaceLabeler](https://github.com/ablacklama/FaceLabeler/releases). This works well for this project because the folder layout and a lot of the files used are the same. There is also an exe version of the labeler that you can put into your main folder and get up and running quickly. Just check the instructions on the [repo](https://github.com/ablacklama/FaceLabeler)
